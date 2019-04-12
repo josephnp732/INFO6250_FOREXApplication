@@ -25,7 +25,7 @@ public class Recipient implements Serializable{
 	private int recipientId; 
 	
 	@Column(name = "name")
-	@Pattern(regexp="[a-zA-Z ]*", message="Please enter a valid name  ")
+	//@Pattern(regexp="[a-zA-Z ]*", message="Please enter a valid name  ")
 	private String name;
 	
 	@Column(name = "accountNumber")
@@ -101,7 +101,7 @@ public class Recipient implements Serializable{
 	}
 
 	@Column(name="purpose")
-	@Pattern(regexp="[a-zA-Z ]*", message="Please enter a valid relation  ")
+	//@Pattern(regexp="[a-zA-Z ]*", message="Please enter a valid relation  ")
 	private String purpose;
 	
 	@Override

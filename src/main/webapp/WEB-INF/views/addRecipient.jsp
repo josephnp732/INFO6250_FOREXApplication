@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Add Recipient</title>
 </head>
 <body>
 <c:set var="contextPath" value="${pageContext.request.contextPath}" />
@@ -22,32 +22,36 @@
 				<tr>
 					<td>Recipient Name :</td>
 					<td><form:input name="name" path="name" required="required" /></td>
-					<font color="red"><form:errors path="emailAddress"/></font>
+					<td><font color="red"><form:errors path="name"/></font></td>
 				</tr>
 				<tr>
 					<td>Account Number :</td>
 					<td><form:input name="accountNumber" path="accountNumber"
 							required="required" /></td>
+							<td> </td>
 				</tr>
 				<tr>
 					<td>Routing Number :</td>
 					<td><form:input name="routingNumber" path="routingNumber"
 							required="required" /></td>
+							<td> </td>
 				</tr>
 				<tr>
 					<td>Email Address:</td>
 					<td><form:input type="text" path="emailAddress"
 							required="required" /></td>
-					<font color="red"><form:errors path="emailAddress"/></font>
+					<td><font color="red"><form:errors path="emailAddress"/></font></td>
 				</tr>
 				<tr>
 					<td>Relation:</td>
 					<td><form:input type="text" path="purpose"
 							required="required" /></td>
-					<font color="red"><form:errors path="purpose"/></font>	
+					<td><font color="red"><form:errors path="purpose"/></font></td>
 				</tr>
 				<tr>
+					<td></td>
 					<td align="center"><input type="submit" value="Add Recipient" /></td>
+					<td></td>
 				</tr>
 			</table>
 		</form:form>

@@ -11,6 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -74,11 +75,14 @@ public class RecipientController {
 	}
 	
 	@RequestMapping(value="/create", method = RequestMethod.POST)
-	public ModelAndView addRecipient(@Valid @ModelAttribute("recipient") Recipient recipient, BindingResult result, HttpServletRequest request) throws LoginException, RecipientException{
+	public ModelAndView addRecipient(@Valid @ModelAttribute("recipient") Recipient recipient,
+			BindingResult result, HttpServletRequest request) throws LoginException, RecipientException {
+		
 		if(result.hasErrors())
 		{
 			new ModelAndView("addRecipient");
 		}
+		
 		HttpSession session = request.getSession();
 		User user = (User) session.getAttribute("user");
 		recipient.setUser(user);

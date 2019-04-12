@@ -9,10 +9,9 @@ select * from payment;
 select * from `Transaction`;
 
 
-
 select * from users where userName = "anoop.c" and password = "hello";
 
-insert into users(userId,address,dateOfBirth,email,`name`,`password`,phoneNumber,userName) values(1,'Boston','07/08/1996','anoop.c@husky.neu.edu','Christy Anoop','hello',8572069003,'anoop.c');
+insert into users(userId,address,dateOfBirth,email,`name`,`password`,phoneNumber,userName) values(1,'Boston','07/08/1996','anoop.c@husky.neu.edu','CJ','hello',8572069003,'anoop.c');
 
 insert into recipient(recipientId,routingNumber,emailAddress,`name`,purpose,accountNumber,user_id) values(1,090928349840,'recipient1@outlook.com','Thomas Simmers','family member',8572069002343,1);
 insert into recipient(recipientId,routingNumber,emailAddress,`name`,purpose,accountNumber,user_id) values(2,090345334980,'recipient2@live.com','Samuel Casey','work place',8572069002343,1);

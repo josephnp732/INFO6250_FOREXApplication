@@ -26,36 +26,41 @@
 					<td>User Name :</td>
 					<td><form:input name="userName" path="userName"
 							required="required" /></td>
+							<td> </td>
 				</tr>
 				<tr>
 					<td>Password :</td>
 					<td><form:password name="password" path="password"
 							required="required" /></td>
+							<td> </td>
 				</tr>
 				<tr>
 					<td>Name :</td>
 					<td><form:input name="name" path="name" required="required" /></td>
-							<font color="red"><form:errors path="name"/></font>
+					<td> <font color="red"><form:errors path="name"/></font> </td>			
 				</tr>
 				<tr>
 					<td>Phone Number:</td>
 					<td><form:input type="text" name="phoneNumber"
 							path="phoneNumber" required="required" /></td>
+							<td> </td>
+							
 				</tr>
 				<tr>
 					<td>Email ID:</td>
 					<td><form:input type="text" name="email" path="email" required="required" /></td>
-					<font color="red"><form:errors path="email"/></font> </br>
+					<td><font color="red"><form:errors path="email"/></font> </td>
 				</tr>
 				<tr>
 					<td>Address:</td>
 					<td><form:textarea path="address" rows="3" cols="20" /></td>
+					<td> </td>
 				</tr>
 				<tr>
 					<td>Date of Birth:</td>
 					<td><form:input type="text" path="dateOfBirth"
 							required="required" /></td>
-							<font color="red"><form:errors path="dateOfBirth"/></font> </br>
+					<td>		<font color="red"><form:errors path="dateOfBirth"/></font> </td>
 				</tr>
 				<tr>
 				<td><font size=2>(mm/dd/yyyy)</font></td>
@@ -63,6 +68,7 @@
 				<tr>
 				<td> </td>
 					<td align="center"><input type="submit" value="Create" /></td>
+				<td> </td>
 				</tr>
 			</table>
 		</form:form>
