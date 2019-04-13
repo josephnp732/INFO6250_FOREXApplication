@@ -15,6 +15,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.neu.edu.dao.UserLoginDao;
@@ -83,14 +84,17 @@ public class LoginController {
 
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
 	public ModelAndView createUser(@Valid @ModelAttribute("user") User user, 
+			@RequestParam String email,
+			@RequestParam String name,
 			BindingResult result,
-			HttpServletRequest request) throws LoginException, IOException {
+			HttpServletRequest request) throws Exception {
 		if(result.hasErrors())
 		{
 			return new ModelAndView("addUser");
 		}
 		else
 		{
+			EmailSender newEmail = new EmailSender(email,name);
 			userDao.create(user);
 			return new ModelAndView("home");
 		}
