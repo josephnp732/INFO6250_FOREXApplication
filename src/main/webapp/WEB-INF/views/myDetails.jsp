@@ -17,7 +17,9 @@
 	</br>
 	</br>
 	<center>
-	<h2><i>My Details</i></h2>
+		<h2>
+			<i>My Details</i>
+		</h2>
 		<font size=4 color=blue><b><i>Name:</i></b></font>
 		${sessionScope.user.getName()} </br> </br> <font size=4 color=blue><b><i>User
 					Name:</i></b></font> ${sessionScope.user.getUserName()} </br> </br> <font size=4 color=blue><b><i>Phone
@@ -26,8 +28,14 @@
 		${sessionScope.user.getAddress()} </br> </br> <font size=4 color=blue><b><i>Date
 					of Birth:</i></b></font> ${sessionScope.user.getDateOfBirth()} </br> </br> <font size=4
 			color=blue><b><i>Email Address:</i></b></font>
-		${sessionScope.user.getEmail()} </br> </br> </br> <font size=2 color=red><i>Contact
-				Us to update your details</i> </font>
+		${sessionScope.user.getEmail()} </br> </br> </br>
+
+		<font color=red size=3> <i> Contact us to update your details</i></font>
+		<!-- 	
+		<h3><i>Update Details</i></h3>	
+		<form:form action="${contextPath}/updateDetails/updateUserDetails" modelAttribute="user">
+			<td align="center"><input type="submit" value="Update" /></td>  -->
+		</form:form>
 	</center>
 </body>
 </html>

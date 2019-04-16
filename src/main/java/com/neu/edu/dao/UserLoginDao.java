@@ -38,4 +38,16 @@ public class UserLoginDao extends DAO {
             throw new LoginException("User Not Found " + userName, e);
         }
     }
+    
+
+	public void update(User user) throws LoginException {
+		try {
+			begin();
+			getSession().update(user);
+			commit();
+		} catch (HibernateException e) {
+			rollback();
+			throw new LoginException("Could not save the user details", e);
+		}
+	}
 }
