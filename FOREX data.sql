@@ -9,7 +9,7 @@ select * from payment;
 select * from `Transaction`;
 
 
-select * from users where userName = "anoop.c" and password = "hello";
+delete from users where userId = 3;
 
 insert into users(userId,address,dateOfBirth,email,`name`,`password`,phoneNumber,userName) values(1,'Boston','07/08/1996','anoop.c@husky.neu.edu','CJ','hello',8572069003,'anoop.c');
 

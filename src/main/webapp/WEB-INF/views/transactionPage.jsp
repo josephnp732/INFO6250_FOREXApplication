@@ -20,7 +20,6 @@
 		<h2>Initiate Transaction</h2>
 	</center>
 	<center>
-		<font color="red"><form:errors path="transactionAmount"/></font>
 		<form:form action="${contextPath}/userTransaction/transact"
 			method="post" modelAttribute="transaction">
 			<table>
@@ -33,7 +32,9 @@
 				<tr>
 					<td>Amount :</td>
 					<td><form:input name="transactionAmount"
-							path="transactionAmount" required="required" /></td>
+							path="transactionAmount" required="required" />
+									<font color="red"><form:errors path="transactionAmount"/></font></td>
+							
 				</tr>
 				<tr>
 					<td>Select Recipient:</td>
